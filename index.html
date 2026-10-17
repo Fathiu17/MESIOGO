@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MESIOGO — The Courage of Ibadan · Àkíkanjú Ìbàdàn</title>
+<meta name="description" content="MESIOGO — an original Ibadan-themed property trading board game. English & Yoruba.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Noto Sans + Noto Serif fully support Yoruba diacritics (ẹ, ọ, ṣ, tone marks) -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&family=Noto+Serif:wght@600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ======================= TOP BAR ======================= -->
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">🛡️</span>
+    <span class="brand-name">MESIOGO</span>
+    <span class="brand-tag" data-i18n="brandTag">Àkíkanjú Ìbàdàn</span>
+  </div>
+  <div class="topbar-actions">
+    <button id="btnSound" class="icon-btn" type="button" aria-label="Toggle sound" data-i18n-aria="ariaSound">🔔</button>
+    <div class="lang-toggle" role="group" aria-label="Language / Èdè">
+      <button class="lang-btn active" type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang-btn" type="button" data-lang="yo" aria-pressed="false">YO</button>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- ======================= 1. START SCREEN ======================= -->
+  <section id="startScreen" class="screen" aria-labelledby="startTitle">
+    <div class="start-card">
+      <p class="kicker" data-i18n="kicker">The Courage of Ibadan · Àkíkanjú Ìbàdàn</p>
+      <h1 id="startTitle" class="game-title">MESIOGO</h1>
+      <p class="game-subtitle"><span lang="yo">“ÀKÍKANJÚ ÌBÀDÀN”</span><span class="sep" aria-hidden="true"> · </span><span lang="en">“THE COURAGE OF IBADAN”</span></p>
+
+      <div class="desc-cols">
+        <div class="desc desc-en" lang="en">
+          <h2>English</h2>
+          <p>MESIOGO is a property-trading journey through Ibadan — the city of brown roofs and
+          brave hearts. Buy its markets, ride its roads, honour its institutions, and
+          out-courage <strong>Ọmọ Ìbàdàn</strong>, your computer rival. Highest Total Points wins.</p>
+        </div>
+        <div class="desc desc-yo" lang="yo">
+          <h2>Yorùbá</h2>
+          <p>MESIOGO jẹ́ ìrìnnàjò ìṣòwò ní Ìbàdàn — ìlú àtàrí-òṣùká àti ọkàn lágbára. Ra ọjà rẹ̀,
+          gba ònà rẹ̀, bù ká àṣà ìlú rẹ̀, kí o sì ṣẹgun <strong>Ọmọ Ìbàdàn</strong>, ọ̀tá kọ̀mpútà rẹ.
+          Ẹni tí ó bá ní Àpapọ̀ ìgbèsí ayé jùlọ ni yóò ṣẹ́gun.</p>
+        </div>
+      </div>
+
+      <div class="start-actions">
+        <button id="btnStart" class="btn btn-primary btn-big" type="button" data-i18n="btnStart">Start · Bíbẹ̀rẹ̀</button>
+        <button id="btnHowTo" class="btn btn-ghost btn-big" type="button" data-i18n="btnHowTo">How to Play · Bí a ṣe ń ṣeré</button>
+      </div>
+
+      <p class="credits" data-i18n="credits">An original Ibadan-themed board game · Pure HTML/CSS/JS · No frameworks</p>
+    </div>
+  </section>
+
+  <!-- ======================= 2. HOW TO PLAY ======================= -->
+  <section id="howToScreen" class="screen" hidden aria-labelledby="howToTitle">
+    <div class="rules-card">
+      <h1 id="howToTitle" class="rules-title" data-i18n="howToTitle">How to Play · Bí a ṣe ń ṣeré</h1>
+      <div class="rules-cols">
+        <div class="rules rules-en" lang="en">
+          <h2>English</h2>
+          <ol>
+            <li>Roll two dice and travel clockwise around Ibadan.</li>
+            <li>Buy markets, terminals and institutions when you land on them; owners collect rent.</li>
+            <li>Own every space of a colour group to build houses, then a hotel.</li>
+            <li>Chance (Ànfààní) and Community Chest (Ẹ̀bùn Ìlú) bring surprises.</li>
+            <li>Roll three doubles in a row and you go straight to Jail. Escape with doubles, ₦50, or a Get-Out card.</li>
+            <li>Pay Market Levy (₦200) and Development Levy (₦100) when you land on them.</li>
+            <li>If you cannot pay, sell buildings and mortgage properties — otherwise you are bankrupt.</li>
+            <li>After 100 turns (50 each) the highest <strong>Total Points</strong> wins.</li>
+          </ol>
+        </div>
+        <div class="rules rules-yo" lang="yo">
+          <h2>Yorùbá</h2>
+          <ol>
+            <li>Ya ọ̀pọ̀ mejì kí o sì rìn yí Ìbàdàn ká lọ́nà tí ọ̀rọ̀ ń lọ.</li>
+            <li>Ra ọjà, ibùdó àti ilé-iṣẹ́ nígbà tí o bá dé ibẹ̀; ẹni tí ó ní nìkan yóò gba owó yíyá.</li>
+            <li>Olúkúlùkù gbàgbọ́ àwòrán kan ṣoṣo — nígbà tí o bá ní gbogbo ibi ìṣọ̀kan àwọ kan, lè kọ́ ilé (houses), lẹ́yìn náà ilé ìtura (hotel).</li>
+            <li>Ànfààní àti Ẹ̀bùn Ìlú ń mú ìṣẹ̀lẹ̀ àìròrẹ́ wá.</li>
+            <li>Tí o bá ya àdíṣẹ́bọ̀ meẹ́ta lẹ́yìn ọ̀kan — o lọ sí Ẹ̀wọ̀n lẹ́sẹkẹsẹ. Ìgbàlà: àdíṣẹ́bọ̀, ₦50, tàbí kaáàdì ìgbàlà.</li>
+            <li>Sán owó Ọjà (₦200) àti Owó Ìdàgbàsókè (₦100) nígbà tí o bá kúlẹ̀ lórí wọn.</li>
+            <li>Tí owó ò tó fún ọ — ta ilé kí o sì fi ohun-ìní rẹ̀ ṣe gbèsè — bí ò bá ṣe bẹ́ẹ̀, ìsòro.</li>
+            <li>Lẹ́yìn ìgbà 100 (50 fun olukuluku), ẹni tí ó bá ní Àpapọ̀ ìgbèsí ayé jùlọ ni yóò ṣẹ́gun.</li>
+          </ol>
+        </div>
+      </div>
+      <button id="btnHowToBack" class="btn btn-ghost" type="button" data-i18n="btnBack">← Back · Padà</button>
+    </div>
+  </section>
+
+  <!-- ======================= 3. BOARD SCREEN ======================= -->
+  <section id="gameScreen" class="screen" hidden>
+    <div class="game-layout">
+
+      <!-- Horizontally scrollable viewport on tiny screens -->
+      <div class="board-viewport" id="boardViewport">
+        <div id="board" class="board" role="grid" aria-label="MESIOGO board · Ọ̀pá ìṣeré MESIOGO">
+          <!-- 40 tiles + center panel are rendered by script.js -->
+          <div id="centerPanel" class="center-panel">
+            <p class="center-kicker" data-i18n="centerKicker">Ìlú ọ̀gọ́rùn-ún òòkà</p>
+            <h2 class="center-title">MESIOGO</h2>
+            <p class="center-sub">ÀKÍKANJÚ ÌBÀDÀN · THE COURAGE OF IBADAN</p>
+            <p id="turnIndicator" class="turn-indicator" aria-live="polite"></p>
+            <p id="spaceInfo" class="space-info" aria-live="polite"></p>
+          </div>
+          <div id="tokensLayer" class="tokens-layer" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <aside class="side-panel" aria-label="Game controls">
+        <div id="playerPanels" class="player-panels"></div>
+
+        <div class="dice-area">
+          <div class="dice-wrap" id="diceWrap" aria-label="Dice">
+            <div class="die" id="die1" data-v="6" aria-hidden="true"></div>
+            <div class="die" id="die2" data-v="6" aria-hidden="true"></div>
+          </div>
+          <div class="controls">
+            <button id="btnRoll" class="btn btn-primary" type="button" data-i18n="btnRoll">🎲 Roll · Ya</button>
+            <button id="btnBuild" class="btn btn-secondary" type="button" data-i18n="btnBuild">🏠 Build · Kọ́</button>
+          </div>
+          <p id="aiThinking" class="ai-thinking" hidden data-i18n="aiThinking">Ọmọ Ìbàdàn ń ṣeré…</p>
+        </div>
+
+        <div class="log-panel">
+          <h3 class="log-title" data-i18n="lblLog">Game Log · Ìtàn Ìṣeré</h3>
+          <ul id="logList" class="log-list" aria-live="polite"></ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ======================= 4. GAME OVER SCREEN ======================= -->
+  <section id="overScreen" class="screen" hidden>
+    <div class="over-actions">
+      <button id="btnPlayAgain" class="btn btn-primary btn-big" type="button" data-i18n="btnPlayAgain">🔁 Play Again · Tún ṣeré</button>
+      <button id="btnDownloadPng" class="btn btn-ghost btn-big" type="button" data-i18n="btnDownloadPng">🖼 Download Result as PNG · Gbà àwòrán</button>
+    </div>
+
+    <!-- Screenshot-friendly result card: everything inside #resultCard is meant for the screenshot -->
+    <div id="resultCard" class="result-card">
+      <header class="res-head">
+        <h1 class="res-title">MESIOGO</h1>
+        <p class="res-sub">“ÀKÍKANJÚ ÌBÀDÀN” · “THE COURAGE OF IBADAN”</p>
+      </header>
+
+      <div class="winner-banner">
+        <span class="crown" aria-hidden="true">👑</span>
+        <span id="winnerText" class="winner-text"></span>
+      </div>
+
+      <table class="score-table">
+        <thead>
+          <tr>
+            <th scope="col" data-i18n="colPlayer">Player · Olùṣeré</th>
+            <th scope="col" data-i18n="colCash">Cash · Owó</th>
+            <th scope="col" data-i18n="colProperty">Property · Ohun-ìní</th>
+            <th scope="col" data-i18n="colBuildings">Buildings · Ilé</th>
+            <th scope="col" data-i18n="colDebts">Debts · Gbèsè</th>
+            <th scope="col" data-i18n="colTotal">Total Points · Àpapọ̀</th>
+          </tr>
+        </thead>
+        <tbody id="scoreBody"><!-- rows injected by script.js --></tbody>
+      </table>
+
+      <p id="scoreFormula" class="score-formula"></p>
+
+      <footer class="res-footer">
+        <p id="resDateTime"></p>
+        <p id="resLang"></p>
+        <p class="shot-msg">📸 <span data-i18n="screenshotMsg">Take a screenshot of this result. · Ya àwòrán èsì yìí.</span></p>
+      </footer>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================= MODAL ROOT ======================= -->
+<div id="modalOverlay" class="modal-overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button id="modalClose" class="modal-close icon-btn" type="button" aria-label="Close · Pade" data-i18n-aria="ariaClose">✕</button>
+    <div id="modalBody"><!-- content injected by script.js --></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+              </html>
+              
