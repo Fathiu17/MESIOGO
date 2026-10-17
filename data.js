@@ -333,4 +333,133 @@ const I18N = {
     infoRent: 'rent ₦{amount}',
     infoJailCards: '{count} jail card(s)',
 
-    
+       /* Player panel */
+    statCash: 'Cash', statProps: 'Properties', statBuildings: 'Buildings',
+    statCards: 'Jail cards', statPosition: 'Space',
+
+    /* Sound */
+    soundOn: '🔔', soundOff: '🔕',
+  },
+
+  yo: {
+    /* UI chrome */
+    brandTag: 'Àkíkanjú Ìbàdàn',
+    ariaSound: 'Yí sáàùndì padà',
+    kicker: 'Àkíkanjú Ìbàdàn · The Courage of Ibadan',
+    btnStart: 'Bíbẹ̀rẹ̀ · Start',
+    btnHowTo: 'Bí a ṣe ń ṣeré · How to Play',
+    howToTitle: 'Bí a ṣe ń ṣeré · How to Play',
+    btnBack: '← Padà · Back',
+    centerKicker: 'Ìlú àtàrí-òṣùká',
+    btnRoll: '🎲 Ya · Roll',
+    btnBuild: '🏠 Kọ́ · Build',
+    aiThinking: 'Ọmọ Ìbàdàn ń ṣeré…',
+    lblLog: 'Ìtàn Ìṣeré · Game Log',
+    btnPlayAgain: '🔁 Tún ṣeré · Play Again',
+    btnDownloadPng: '🖼 Gbà àwòrán · Download PNG',
+    colPlayer: 'Olùṣeré', colCash: 'Owó', colProperty: 'Ohun-ìní',
+    colBuildings: 'Ilé', colDebts: 'Gbèsè', colTotal: 'Àpapọ̀ ìgbèsí ayé',
+    screenshotMsg: 'Ya àwòrán èsì yìí.',
+    ariaClose: 'Pade',
+    credits: 'Ère-ìṣeré àṣà ìlú Ìbàdàn tí wọ́n ṣe fúnra rẹ̀ · HTML/CSS/JS gidi · Kò sí àwoṣe',
+
+    /* Players */
+    you: 'Ìwọ', aiName: 'Ọmọ Ìbàdàn',
+    turnYou: 'Ìgbà rẹ ni — ya ọ̀pọ̀!',
+    turnAi: 'Ìgbà Ọmọ Ìbàdàn ni…',
+
+    /* Log & dice */
+    logRolled: '{p} ya {d1} àti {d2} = {total}',
+    logDoubles: 'Àdíṣẹ́bọ̀! {p} máa ya lẹ́ẹ̀kan sí i.',
+    logThreeDoubles: 'Àdíṣẹ́bọ̀ mẹ́ta lẹ́yìn ọ̀kan — {p} lọ sí Ẹ̀wọ̀n lẹ́sẹkẹsẹ!',
+    logPassedStart: '{p} kọjá Bíbẹ̀rẹ̀, ó sì gba ₦200.',
+    logLanded: '{p} dé {space}.',
+
+    /* Buy modal */
+    buyTitle: 'Ṣé ò fẹ́ ra ohun-ìní yìí?',
+    buyQuestion: '{space} ní iye ₦{price}. Tí o bá ra á, ìwọ ni yóò máa gba owó yíyá. Ra á tàbí kọjá.',
+    btnBuy: 'Ra · Buy',
+    btnPass: 'Kọjá · Pass',
+    logBought: '{p} ra {space} ní iye ₦{price}.',
+    logPassed: '{p} kọjá lórí {space}.',
+    notEnoughCash: 'Owó ò tó fún ọ láti ra ohun-ìní yìí.',
+
+    /* Rent modal */
+    rentTitle: 'Owó yíyá',
+    rentPayMsg: '{p} ń san owó yíyá ₦{amount} fún {owner} lórí {space}.',
+    mortgagedNoRent: '{space} wà lábẹ́ gbèsè — kò sí owó yíyá.',
+    ownedBy: '{owner} ló ní èyí',
+    btnOK: 'Ó dára · OK',
+
+    /* Rent table in buy modal */
+    rentLabel: 'Owó yíyá', oneHouse: 'pẹ̀lú ilé 1', twoHouses: 'pẹ̀lú ilé 2',
+    threeHouses: 'pẹ̀lú ilé 3', fourHouses: 'pẹ̀lú ilé 4', hotel: 'pẹ̀lú ilé ìtura',
+    housesCost: 'Ilé kọ̀ọ̀kan ní iye ₦{cost}',
+    fullSetBonus: 'Owó yíyá máa ń ọ̀kẹ̀ lógun tí ẹni kan bá ní gbogbo ibi ìṣọ̀kan àwọ náà.',
+    transportRentNote: 'Owó yíyá dá lórí iye ibùdó tí o bá ní.',
+    utilityRentNote: 'Owó yíyá = ọ̀pọ̀ × 4 (ìmọ́lẹ̀ kan) tàbí ọ̀pọ̀ × 10 (méjèèjì).',
+
+    /* Tax / parking / corners */
+    taxPayMsg: '{p} ń san ₦{amount} — {tax}.',
+    freeParkingMsg: '{p} ń simi ní Ìsìnmi Ọ̀fẹ́ — ibi ààbò ni, kò sí ohun kankan.',
+    jailVisitMsg: '{p} ṣe ìbẹ̀wò Ẹ̀wọ̀n nìkan.',
+    goToJailMsg: 'Wọ́n dá {p} lọ sí Ẹ̀wọ̀n lọ́nà kíákíá!',
+
+    /* Event cards */
+    chanceKicker: 'ÀNFÀÀNI · CHANCE',
+    chestKicker: 'Ẹ̀BÙN ÌLÚ · COMMUNITY CHEST',
+    cardOK: 'Tẹ̀síwájú · Continue',
+
+    /* Jail */
+    jailTitle: 'Ẹ̀wọ̀n — Ò wà nínú Ẹ̀wọ̀n',
+    jailSub: 'Ya àdíṣẹ́bọ̀, sán ₦50, tàbí lo kaáàdì ìgbàlà.',
+    jailTryDoubles: 'Gbìyànjú àdíṣẹ́bọ̀ · Try doubles',
+    jailPay: 'Sán ₦50 · Pay ₦50',
+    jailUseCard: 'Lo kaáàdì · Use card',
+    jailNoDoubles: 'Kò sí àdíṣẹ́bọ̀ — {p} ṣì wà nínú Ẹ̀wọ̀n.',
+    jailForcedPay: 'Ẹ̀wọ̀n keeta — {p} gbọdọ̀ sán ₦50.',
+    jailPaid: '{p} sán ₦50, ó sì kúrò nínú Ẹ̀wọ̀n.',
+    jailCardUsed: '{p} lo kaáàdì ìgbàlà, ó sì kúrò nínú Ẹ̀wọ̀n.',
+    jailDoublesOut: '{p} ya àdíṣẹ́bọ̀, ó sì kúrò nínú Ẹ̀wọ̀n!',
+
+    /* Building */
+    buildTitle: 'Kọ́ ilé · Build houses',
+    buildEmpty: 'O gbọdọ̀ ní gbogbo ibi ìṣọ̀kan àwọ kan kí o tó lè kọ́ ilé.',
+    buildMaxed: 'Ilé ìtura ti wà lórí ohun-ìní yìí tẹ́lẹ̀.',
+    buildHouse: 'Kọ́ ilé · Build house (₦{cost})',
+    logBuiltHouse: '{p} kọ́ ilé lórí {space} (−₦{cost}).',
+    logBuiltHotel: '{p} kọ́ ilé ìtura lórí {space} (−₦{cost}).',
+    logSoldHouse: '{p} ta ilé lórí {space} (+₦{cost}).',
+    buildEvenRule: 'Ó yẹ kí o kọ́ ní bíbáramu — ò lè kọ́ ilé kejì lórí {space} nígbà tí ohun-ìní mìíràn nínú {group} kò tíì ní ilé tó péye.',
+    transportRentNote: 'Owó yíyá dá lórí iye ibùdó tí o bá ní.',
+    utilityRentNote: 'Owó yíyá = ọ̀pọ̀ × 4 (ìmọ́lẹ̀ kan) tàbí ọ̀pọ̀ × 10 (méjèèjì).',
+
+    /* Mortgage */
+    mortgageTitle: 'Gbèsè · Mortgage',
+    mortgageMsg: 'Ṣé ò fẹ́ fi {space} ṣe gbèsè fún ₦{amount}? Ohun-ìní tó wà lábẹ́ gbèsè kò ní gba owó yíyá títí í tó san gbèsè náà (₦{cost}).',
+    btnMortgage: 'Fi ṣe gbèsè · Mortgage',
+    unmortgageMsg: 'Ṣé ò fẹ́ san gbèsè lórí {space} fún ₦{cost}?',
+    btnUnmortgage: 'San gbèsè · Lift mortgage',
+    logMortgaged: '{p} fi {space} ṣe gbèsè fún ₦{amount}.',
+    logUnmortgaged: '{p} san gbèsè lórí {space} fún ₦{amount}.',
+
+    /* Bankruptcy / game over */
+    bankruptTitle: 'Ìsòro Owó! · Bankruptcy!',
+    bankruptMsg: '{p} ò lè san ₦{amount}. Ta ilé kí o sì fi ohun-ìní ṣe gbèsè — bí ò bá ṣe bẹ́ẹ̀, ìṣeré yóò parí.',
+    btnSellBuilding: 'Ta ilé · Sell building',
+    bankruptEnd: '{p} kúrò nítorí ìsòro owó — {winner} ni ó ṣẹ́gun!',
+    overTurns: 'Wọ́n ṣe ìgbà 100 — ẹni tí ó ní Àpapọ̀ ìgbèsí ayé jùlọ ni yóò ṣẹ́gun!',
+    winnerIs: 'Olùborí: {name}',
+    tieResult: 'Wọ́n bá ara wọn mu!',
+    formula: 'Àpapọ̀ ìgbèsí ayé = Owó + Iye Ohun-ìní + Iye Ilé + Kaáàdì Ẹ̀wọ̀n (₦50 kọ̀ọ̀kan) − Gbèsè',
+    langUsed: 'Èdè · Language',
+    dateLocale: 'yo-NG',
+
+     /* Player panel */
+    statCash: 'Owó', statProps: 'Ohun-ìní', statBuildings: 'Ilé',
+    statCards: 'Kaáàdì ẹ̀wọ̀n', statPosition: 'Ibi',
+
+    /* Sound */
+    soundOn: '🔔', soundOff: '🔕',
+  },
+};
