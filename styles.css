@@ -457,4 +457,110 @@ body {
 
 .score-table { width: 100%; border-collapse: collapse; font-size: clamp(.72rem, 2.6vw, .92rem); }
 
+.score-table th {
+  background: var(--indigo); color: var(--ivory); padding: 8px 6px;
+  font-size: .8em; text-transform: uppercase; letter-spacing: .05em;
+}
+.score-table td { padding: 10px 6px; border-bottom: 1px solid #e0d5b8; font-weight: 600; }
+.score-table .winner-row { background: rgba(212, 160, 23, .28); }
+.score-table .winner-row td { border-bottom-color: var(--gold); }
+.score-table td:last-child, .score-table th:last-child { color: var(--terra); }
+
+.score-formula { font-size: .72rem; color: var(--brown); margin: 12px 0; }
+.res-footer { border-top: 1px dashed #cbb98f; padding-top: 10px; font-size: .75rem; color: var(--brown); }
+.res-footer p { margin: 2px 0; }
+.shot-msg { font-weight: 700; color: var(--terra); font-size: .85rem; margin-top: 6px; }
+
+/* ---------- 13. Responsive breakpoints ---------- */
+
+/* ≥1536px — large desktops: generous board */
+@media (min-width: 1536px) {
+  :root { --bs: min(85vh, 820px); }
+  .side-panel { width: 360px; }
+}
+
+/* 1280–1535px — desktops */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  :root { --bs: min(80vh, 720px); }
+}
+
+/* 1024–1279px — tablets landscape / small laptops */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root { --bs: min(75vh, 640px); }
+  .side-panel { width: 300px; }
+}
+
+/* 768–1023px — tablets portrait */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root { --bs: min(80vw, 80vh, 620px); }
+  .game-layout { flex-direction: column; align-items: center; }
+  .side-panel { width: min(94vw, 640px); }
+  .player-panels { flex-direction: row; }
+  .player-panels .player-panel { flex: 1; }
+}
+
+/* 600–767px — large phones: board fits, two-column control panel */
+@media (min-width: 600px) and (max-width: 767px) {
+  :root { --bs: min(92vw, 92vh); }
+  .game-layout { flex-direction: column; align-items: center; }
+  .side-panel { width: min(96vw, 640px); display: grid; grid-template-columns: 1fr 1fr; align-items: start; }
+  .player-panels { grid-column: 1 / -1; flex-direction: row; }
+  .player-panels .player-panel { flex: 1; }
+  .log-list { max-height: 150px; }
+}
+
+/* 480–599px — mid phones: board scales to fit width */
+@media (min-width: 480px) and (max-width: 599px) {
+  :root { --bs: min(96vw, 80vh); }
+  .game-layout { flex-direction: column; align-items: center; }
+  .side-panel { width: 96vw; }
+  .player-panels { flex-direction: row; }
+  .player-panels .player-panel { flex: 1; padding: 8px 10px; }
+  .desc-cols, .rules-cols { grid-template-columns: 1fr; }
+}
+
+/* 321–479px — small phones: horizontal board scroll, full-screen modals */
+@media (max-width: 479px) {
+  .board-viewport { overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%; padding-bottom: 6px; }
+  .board { width: 540px; flex: none; }   /* intentionally wider than viewport → scrollable */
+  .game-layout { flex-direction: column; }
+  .side-panel { width: 100%; }
+  .player-panels { flex-direction: row; }
+  .player-panels .player-panel { flex: 1; padding: 8px; }
+  .modal-overlay { padding: 0; align-items: stretch; }
+  .modal {
+    width: 100vw; height: 100vh; max-height: 100vh; border-radius: 0;
+    padding-top: 34px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .desc-cols, .rules-cols { grid-template-columns: 1fr; }
+  .die { width: 48px; height: 48px; }
+}
+
+/* ≤320px — tiny phones: compact board, icon-first controls */
+@media (max-width: 320px) {
+  .board { width: 470px; }
+  .brand-tag { display: none; }
+  .btn { padding: 10px 14px; font-size: .85rem; }
+  .tile-name { font-size: .95em; }
+}
+
+/* Landscape phones — hide log to free space */
+@media (orientation: landscape) and (max-height: 500px) {
+  .log-panel { display: none; }
+  .screen { padding: 8px; }
+  .topbar { position: static; padding: 6px 12px; }
+  .topbar .icon-btn, .lang-btn { min-height: 40px; min-width: 40px; }
+}
+
+/* ---------- 14. Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .token { transition: none; }
+}
+
  
